@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main{
 
     //Funcion para imprimir los arreglos
@@ -16,6 +18,11 @@ public class Main{
         RadixSort<Integer> radix = new RadixSort<>();
         BubbleSort<Integer> bubble = new BubbleSort<>();
 
+
+        System.out.println("Iniciar ");
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+
         for (int i = 10; i <= 20; i++){
             //Generar numeros al azar
             archivo.generarNums("numeros.txt",i);
@@ -23,26 +30,23 @@ public class Main{
             Integer[] numArray = archivo.leer("numeros.txt", Integer::parseInt, i);
 
             //Ordenarlos con los algoritmos 
-            //gnome.sort(numArray);
-            //printArray(numArray);
+            gnome.sort(numArray);
+            printArray(numArray);
 
-            //merge.sort(numArray, 0, numArray.length - 1);
-            //printArray(numArray);
+            merge.sort(numArray, 0, numArray.length - 1);
+            printArray(numArray);
 
-            //quick.sort(numArray);
-            //printArray(numArray);
+            quick.sort(numArray);
+            printArray(numArray);
 
-            //radix.sort(numArray);
-            //printArray(numArray);
+            radix.sort(numArray);
+            printArray(numArray);
             
             bubble.sort(numArray);
             printArray(numArray);
         }
 
-
-        
-        
-
+        scanner.close();
         
     }
 
