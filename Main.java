@@ -14,6 +14,7 @@ public class Main{
         MergeSort<Integer> merge = new MergeSort<>();
         QuickSort<Integer> quick = new QuickSort<>();
         RadixSort<Integer> radix = new RadixSort<>();
+        BubbleSort<Integer> bubble = new BubbleSort<>();
 
         for (int i = 10; i <= 20; i++){
             //Generar numeros al azar
@@ -34,7 +35,7 @@ public class Main{
             //radix.sort(numArray);
             //printArray(numArray);
             
-            radix.sort(numArray);
+            bubble.sort(numArray);
             printArray(numArray);
         }
 
