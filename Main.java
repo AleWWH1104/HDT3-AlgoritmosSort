@@ -13,8 +13,9 @@ public class Main{
         GnomeSort<Integer> gnome = new GnomeSort<>();
         MergeSort<Integer> merge = new MergeSort<>();
         QuickSort<Integer> quick = new QuickSort<>();
+        RadixSort<Integer> radix = new RadixSort<>();
 
-        for (int i = 10; i <= 100; i++){
+        for (int i = 10; i <= 20; i++){
             //Generar numeros al azar
             archivo.generarNums("numeros.txt",i);
             //Crear el array con los numeros
@@ -27,9 +28,14 @@ public class Main{
             //merge.sort(numArray, 0, numArray.length - 1);
             //printArray(numArray);
 
-            quick.sort(numArray);
-            printArray(numArray);
+            //quick.sort(numArray);
+            //printArray(numArray);
 
+            //radix.sort(numArray);
+            //printArray(numArray);
+            
+            radix.sort(numArray);
+            printArray(numArray);
         }
 
 
