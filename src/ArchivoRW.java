@@ -46,8 +46,5 @@ public class ArchivoRW <T> {
         }
         return array;
     }
-
-
-    
-   
+ 
 }
