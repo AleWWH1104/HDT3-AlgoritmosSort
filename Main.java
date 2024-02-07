@@ -12,15 +12,18 @@ public class Main{
         ArchivoRW<Integer> archivo = new ArchivoRW<>();
         GnomeSort<Integer> gnome = new GnomeSort<>();
         MergeSort<Integer> merge = new MergeSort<>();
-        //Generar numeros al azar
-        archivo.generarNums("numeros.txt",15);
-        //Crear el array con los numeros
-        Integer[] numArray = archivo.leer("numeros.txt", Integer::parseInt, 15);
-        //Ordenarlos con los algoritmos 
-        gnome.sort(numArray);
-        printArray(numArray);
-        merge.sort(numArray, 0, numArray.length - 1);
-        printArray(numArray);
+
+        for (int i = 10; i <= 3000; i++){
+            //Generar numeros al azar
+            archivo.generarNums("numeros.txt",i);
+            //Crear el array con los numeros
+            Integer[] numArray = archivo.leer("numeros.txt", Integer::parseInt, 15);
+            //Ordenarlos con los algoritmos 
+            gnome.sort(numArray);
+            printArray(numArray);
+            merge.sort(numArray, 0, numArray.length - 1);
+            printArray(numArray);
+        }
 
 
         
