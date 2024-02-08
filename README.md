@@ -1,4 +1,6 @@
 # HDT3-AlgoritmosSort
+Iris Ayala 23965
+David Dominguez 23712
 
 Aquí tienes un README básico para describir tu proyecto. Puedes agregar más detalles según sea necesario:
 
